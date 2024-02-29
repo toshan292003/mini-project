@@ -37,25 +37,6 @@ body{
     font-size: 1rem;
 }
 
-.home-1 div button,
-.home-2 button{
-    padding: 20px 40px;
-    font-size: 1.2rem;
-    background-color: var(--home-color);
-    color: white;
-    font-family: "Lexend", sans-serif;
-    font-weight: 500;
-    border-radius: 5px;
-    border: none;
-    transition: all .5s ease;
-}
-
-.home-1 div button:hover,
-.home-2 button:hover{
-    cursor: pointer;
-    background-color: rgb(12, 32, 56);
-}
-
 
 .home-2{
     display: flex;
@@ -162,9 +143,20 @@ body{
 }
 
 .home-4 div section img{
-    width: 60vw;
+    height: 400px;
 }
 
 .home-4 div :nth-child(1){
     width: 600px;
+}
+
+.home-4 div section{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.3rem;
+    font-family: "Lexend", sans-serif;
+    text-align: justify;
 }

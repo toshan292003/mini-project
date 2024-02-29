@@ -1,5 +1,7 @@
 import React from "react";
 import "./home.css";
+import Button from "../Components/Button";
+
 export default function Home () {
     return (
         <>
@@ -11,9 +13,7 @@ export default function Home () {
                     <p>
                     Experience peace of mind with our swift ambulance booking service. Whether it's for you or a loved one, trust us for reliable emergency response, 24/7. Your safety is our priority. Book now.
                     </p>
-                    <button>
-                        ORDER RESCUE TEAM
-                    </button>
+                    <Button title = "ORDER RESCUE TEAM"></Button>
                 </div>
                 <div className="home-hero-img">
                 </div>
@@ -39,7 +39,7 @@ export default function Home () {
                         <p>On-site medical support for events, ensuring the well-being of attendees.</p>
                     </div>
                 </div>
-                <button>Browse more Services</button>
+                <Button title = "Browse More Services"></Button>
             </section>
 
             <section className="home-3">
@@ -55,7 +55,7 @@ export default function Home () {
                         <p>We are a couple of students from Sahyadri College of Engineering and Management, Mangaluru, currently in 5th Semister, 3rd year Engineering who are passionate in Building Websites.
                         We built this website solely to test our Frontend and Basic Backend development Skills.
                         We have used frameworks like React.Js, Styling Sheets like Tailwind for Frontend and Node.Js , Express.Js, MySQL for Backend.</p>
-                        <button>About us</button>
+                        <Button title = "ABOUT US" link = "#"></Button>
                     </section>
                     <section>
                         <img src="https://img.freepik.com/free-vector/gradient-devops-illustration_23-2149373211.jpg?w=1380&t=st=1708356216~exp=1708356816~hmac=1ea948c204eec4e38695c4437d119021ad6897e2c6f42c1bdfc81dc7776e37d0" alt="" />
