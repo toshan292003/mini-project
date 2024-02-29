@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./home.css";
 import Button from "../Components/Button";
+import {motion, useScroll} from 'framer-motion';
 
 export default function Home () {
+    useScroll({
+        target : "",
+        offset : ["0 1","1.33 1"]
+    });
     return (
         <>
             <section className="home-1">
