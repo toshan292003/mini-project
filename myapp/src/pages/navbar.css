@@ -24,19 +24,24 @@
     font-size: 1.2rem;
 }
 
-.navitems ul li a{
-    color: rgb(0, 67, 143);
-    text-decoration: none;
-    padding: 0px 20px;
-    opacity: 50%;
+.navitems ul li{
     position: relative;
     bottom: 0px;
     transition: all .5s ease;
+    opacity: 50%;
 }
-.navitems ul li a:hover{
+
+.navitems ul li a{
+    color: rgb(0, 67, 143);
+    text-decoration: none;
+    padding: 10px 20px;
+}
+.navitems ul li:hover{
     opacity: 100%;
     bottom: 10px;
 }
+
+
 
 .navitems span{
     font-size: 1.5rem;

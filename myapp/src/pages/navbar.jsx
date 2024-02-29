@@ -10,7 +10,7 @@ export default function Navbar(){
                 <div className="navitems">
                     <ul>
                         <li>
-                            <a href="">Home</a>
+                            <a href="/">Home</a>
                         </li>
                         <li>
                             <a href="">Tracking</a>
@@ -19,7 +19,7 @@ export default function Navbar(){
                             <a href="">Bookings</a>
                         </li>
                         <li>
-                            <a href="">About Us</a>
+                            <a href="/about">About Us</a>
                         </li>
                         <li>
                             <a href="">Contact Us</a>
