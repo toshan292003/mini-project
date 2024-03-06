@@ -1,0 +1,82 @@
+.contact-header {
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://wallpaperaccess.com/full/2003822.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contact-header::before{
+    content: "";
+    height: 350px;
+    width: 100%;
+    background-color: black;
+    opacity: 50%;
+    mix-blend-mode: multiply;
+    position: absolute;
+}
+
+.contact-header h1 {
+    animation-name: LetterSpacing;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0, 0.97, 0.63, 0.99);
+    animation-fill-mode: forwards;
+    font-size: 60px;
+    z-index: 10;
+}
+
+.contactbox .heading{
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 300;
+}
+
+.contactbox p{
+    font-size: 5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.card-group{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@keyframes LetterSpacing {
+    0% {
+        opacity: 0%;
+        letter-spacing: 100px;
+    }
+
+    100% {
+        opacity: 100%;
+        letter-spacing: 20px;
+    }
+}
+
+
+@media screen  and (max-width: 700px){
+    .contactbox{
+        padding-top: 50px;
+    }
+    .contact-header{
+        height: 250px;
+    }
+    .contact-header h1{
+        font-size: 30px;
+    }
+    .contactbox .heading{
+        font-size: 30px;
+    }
+}

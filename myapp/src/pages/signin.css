@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    height: 81vh;
+    background-image: url("https://images.hdqwalls.com/wallpapers/abstract-dark-colorful-digital-art-yi.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.signinbox{
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    width: 30%;
+    padding: 50px 10px;
+    text-align: center;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.525);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.279);
+    transition: all .5s ease;
+    animation: Movedown 1s cubic-bezier(0, 0.4, 0.54, 0.99);
+}
+
+h1{
+    display: block;
+}
+
+.inputbox{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    gap: 20px;
+    padding: 30px;
+    font-size: 1.3rem;
+}
+
+.inputbox input{
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+a{
+    color: rgb(90, 184, 255);
+    text-decoration: none;
+    transition: all .5s ease;
+    padding: 0px 10px;
+}
+
+a:hover{
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+.inputbox button{
+    background-color: rgb(31, 100, 202);
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    transition: all .5s ease;
+}
+
+.inputbox button:hover{
+    background-color: rgb(22, 71, 146);
+}
+
+@keyframes Movedown {
+    0%{
+        transform: translateY(-50px);
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0px);
+    }
+}

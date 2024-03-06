@@ -16,7 +16,7 @@ export default function Navbar(){
                             <a href="">Tracking</a>
                         </li>
                         <li>
-                            <a href="">Bookings</a>
+                            <a href="/input">Bookings</a>
                         </li>
                         <li>
                             <a href="/about">About Us</a>
@@ -25,7 +25,7 @@ export default function Navbar(){
                             <a href="">Contact Us</a>
                         </li>
                         <li>
-                            <a href="">Signin</a>
+                            <a href="/signin">Login</a>
                         </li>
                     </ul>
                 </div>
