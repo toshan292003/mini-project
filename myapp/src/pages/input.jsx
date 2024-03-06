@@ -20,7 +20,7 @@ const FormComponent = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/data', { data: formData });
+      const response = await axios.post('/testing', { data: formData });
       console.log(response.data);
       setFormData({
         field1: '',
