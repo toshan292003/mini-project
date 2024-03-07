@@ -30,7 +30,7 @@ const FormComponent = () => {
       toast.success("Data Inserted Successfully!");
     } catch (error) {
       console.error('Error submitting data:', error);
-      toast.error("Error in Inserting Data");
+      toast.error("This Entry Already Exists!");
     }
   };
 
