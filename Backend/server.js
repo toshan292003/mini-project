@@ -5,25 +5,17 @@ const app = express();
 const port = 3001;
 
 const connection = require('./daabase');
-
+const smapleController = require('./Controllers/sample')
 app.use(cors());
 
-app.post('/details', (req, res) => {
-    const { field1, field2 } = req.body;
-  
-    // Insert data into MySQL
-    const query = 'INSERT INTO sample (idsample, name) VALUES (?, ?)';
-    connection.query(query, [field1, field2], (err, result) => {
-      if (err) {
-        console.error('Error inserting data into MySQL:', err);
-        res.status(500).send('Internal Server Error');
-        return;
-      }
-      console.log('Data inserted successfully');
-      res.status(200).send('Data inserted successfully');
-    });
-  });
-  
+app.use(express.json())
+
+
+app.use('/app',smapleController);
+
+
+
+
 app.get('/',(req,res)=>{
   res.send("Hello this is backend.")
 })
