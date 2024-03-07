@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import {  toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 
 const FormComponent = () => {
   const [formData, setFormData] = useState({
-    field1: '',
-    field2: '',
+    name: '',
+    phone_1: '',
+    phone_2: ''
   });
 
   const handleChange = (e) => {
@@ -24,8 +24,9 @@ const FormComponent = () => {
       const response = await axios.post('http://localhost:3001/app/details', formData);
       console.log(response.data);
       setFormData({
-        field1: '',
-        field2: ''
+        name: '',
+        phone_1: '',
+        phone_2: ''
       });
       toast.success("Data Inserted Successfully!");
     } catch (error) {
@@ -36,27 +37,19 @@ const FormComponent = () => {
 
   return (
     <div>
-      <h2>Form</h2>
+      <h2>Whom shall we alert when you are in trouble?</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="field1">Field 1:</label>
-          <input
-            type="text"
-            id="field1"
-            name="field1"
-            value={formData.field1}
-            onChange={handleChange}
-          />
+          <label htmlFor="field1">Your Name:</label>
+          <input type="text" name="name" value={formData.field1} onChange={handleChange} />
         </div>
         <div>
-          <label htmlFor="field2">Field 2:</label>
-          <input
-            type="text"
-            id="field2"
-            name="field2"
-            value={formData.field2}
-            onChange={handleChange}
-          />
+          <label htmlFor="field2">Phone 1:</label>
+          <input type="text" name="phone_1" value={formData.field2} onChange={handleChange} />
+        </div>
+        <div>
+          <label htmlFor="field2">Phone 2:</label>
+          <input type="text" name="phone_2" value={formData.field2} onChange={handleChange} />
         </div>
         <button type="submit">Submit</button>
       </form>

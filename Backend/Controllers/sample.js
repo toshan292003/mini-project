@@ -6,10 +6,10 @@ const connection = require('../daabase');
 
 
 router.post('/details', (req, res) => {
-    const { field1, field2 } = req.body;
+    const { name, phone_1,phone_2 } = req.body;
     // Insert data into MySQL
-    const query = 'INSERT INTO mini_project.testing VALUES(?,?)';
-    connection.query(query, [field1, field2], (err, result) => {
+    const query = 'INSERT INTO mini_project.testing VALUES(?,?,?)';
+    connection.query(query, [name, phone_1,phone_2], (err, result) => {
       if (err) {
         console.error('Error inserting data into MySQL:', err);
         res.status(500).send('Internal Server Error');

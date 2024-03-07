@@ -16,7 +16,7 @@ export default function Navbar(){
                             <a href="">Tracking</a>
                         </li>
                         <li>
-                            <a href="/input">Bookings</a>
+                            <a href="/input">Inputs</a>
                         </li>
                         <li>
                             <a href="/about">About Us</a>
