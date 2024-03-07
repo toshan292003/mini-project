@@ -12,7 +12,6 @@ export default function ProfileCard(props){
                             <span>USN : {props.usn}</span>
                             <span>Email : {props.email}</span>
                         </li>
-                        <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ex soluta delectus nesciunt exercitationem quis maxime laudantium debitis ipsum itaque!</p></li>
                     </ul>
                 </div>
             </div>

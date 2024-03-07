@@ -7,14 +7,14 @@
 .profile-card-box{
     height: var(--profilecardhieght);
     border: 2px solid white;
-    /* border-radius: 1000px; */
     padding: calc(var(--profilecardhieght)/20);
     margin: 0px calc(var(--profilecardhieght)/50);
     margin-bottom: calc(var(--profilecardhieght)/7);
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    border-radius: 5px;
 
     width: 700px;
     background: linear-gradient(45deg,#9e9e9e,#c9c0c0);
@@ -23,6 +23,7 @@
 .profile-card-box img{
     border: 1px solid white;
     height: 100%;
+    border-radius: 5px;
     aspect-ratio: 1/1;
 }
 
@@ -34,7 +35,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 100%;
     padding: calc(var(--profilecardhieght)/5) calc(var(--profilecardhieght)/10);
     padding-right: 0;
     margin: 0;

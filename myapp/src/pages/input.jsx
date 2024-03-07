@@ -3,6 +3,7 @@ import axios from 'axios';
 import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 const FormComponent = () => {
   const [formData, setFormData] = useState({
     field1: '',
@@ -20,11 +21,11 @@ const FormComponent = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/testing', { data: formData });
+      const response = await axios.post('http://localhost:3001/', { data: formData });
       console.log(response.data);
       setFormData({
         field1: '',
-        field2: '',
+        field2: ''
       });
       toast.success("Data Inserted Successfully!");
     } catch (error) {
