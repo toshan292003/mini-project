@@ -5,7 +5,6 @@ const connection = mysql2.createConnection({
     user: 'root',
     password: 'Saman@123',
     database: 'mini_project'
-    
 });
 
 connection.connect(err => {

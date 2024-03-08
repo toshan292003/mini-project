@@ -1,7 +1,52 @@
-import React from "react";
+import React ,{useState} from "react";
 import "./home.css";
 import Button from "../Components/Button";
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 export default function Home () {
+
+    const [locData, setlocData] = useState({
+        latitude: '',
+        longitude: ''
+      });
+    
+      const PostLoc = async () => {
+        try {
+          const response = await axios.post('http://localhost:3001/app/location', locData);
+          console.log(response.data);
+          setlocData({
+            latitude: '',
+            longitude: ''
+          });
+          toast.success("Data Inserted Successfully!");
+        } catch (error) {
+          console.error('Error submitting data:', error);
+          toast.error("This Entry Already Exists!");
+        }
+      };
+
+    const sendLocation = ()=>{
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(
+                (position)=>{
+                    setlocData({
+                        latitude:position.coords.latitude,
+                        longitude:position.coords.longitude,
+                    })
+
+                    PostLoc();
+                    console.log("Lattitude = "+ position.coords.latitude);
+                    console.log("Longitude = "+ position.coords.longitude);
+                },
+                (err)=>{
+                    console.log(err.message);
+                }
+            )
+        }
+    }
     return (
         <>
             <section className="home-1">
@@ -12,7 +57,7 @@ export default function Home () {
                     <p>
                     Experience peace of mind with our swift ambulance booking service. Whether it's for you or a loved one, trust us for reliable emergency response, 24/7. Your safety is our priority. Book now.
                     </p>
-                    <Button title = "ORDER RESCUE TEAM" link="/"></Button>
+                    <button onClick={sendLocation}>ORDER RESCUE TEAM</button>
                 </div>
                 <div className="home-hero-img">
                 </div>
