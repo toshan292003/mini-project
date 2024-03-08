@@ -14,7 +14,7 @@ export default function Home () {
 
     const sendLocation = async (e)=>{
         console.log(locData);
-        let ID = "LOC" + Math. floor(Math. random() * 10) + 1;
+        let ID = "LOC" + Math. floor(Math. random() * 99);
         e.preventDefault();
         if(navigator.geolocation){
             navigator.geolocation.getCurrentPosition(
