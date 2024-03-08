@@ -5,16 +5,12 @@ const app = express();
 const port = 3001;
 
 const connection = require('./daabase');
-const smapleController = require('./Controllers/sample')
+const smapleController = require('./Controllers/PhoneController')
 app.use(cors());
 
 app.use(express.json())
 
-
 app.use('/app',smapleController);
-
-
-
 
 app.get('/',(req,res)=>{
   res.send("Hello this is backend.")
