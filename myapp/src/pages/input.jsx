@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './input.css';
 
 const FormComponent = () => {
   const [formData, setFormData] = useState({
@@ -36,21 +37,12 @@ const FormComponent = () => {
   };
 
   return (
-    <div>
+    <div className='input'>
       <h2>Whom shall we alert when you are in trouble?</h2>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="field1">Your Name:</label>
-          <input type="text" name="name" value={formData.field1} onChange={handleChange} />
-        </div>
-        <div>
-          <label htmlFor="field2">Phone 1:</label>
-          <input type="text" name="phone_1" value={formData.field2} onChange={handleChange} />
-        </div>
-        <div>
-          <label htmlFor="field2">Phone 2:</label>
-          <input type="text" name="phone_2" value={formData.field2} onChange={handleChange} />
-        </div>
+        <input type="text" name="name" placeholder='Your Name' value={formData.field1} onChange={handleChange} />
+        <input type="text" name="phone_1" placeholder='Emergency Phone 1' value={formData.field2} onChange={handleChange} />
+        <input type="text" name="phone_2" placeholder='Emergency Phone 2' value={formData.field2} onChange={handleChange} />
         <button type="submit">Submit</button>
       </form>
     </div>
