@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-
 const connection = require('../daabase');
 
 router.post('/location', (req, res) => {
@@ -13,7 +12,7 @@ router.post('/location', (req, res) => {
       res.status(500).send('Internal Server Error');
       return;
     }
-    console.log('Data inserted successfully');
+    console.log('Data inserted successfully'); 
     res.status(200).send('Data inserted successfully');
   });
 });
