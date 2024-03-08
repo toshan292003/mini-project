@@ -5,46 +5,46 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
 export default function Home () {
-
     const [locData, setlocData] = useState({
+        id:'',
         latitude: '',
         longitude: ''
       });
-    
-      const PostLoc = async () => {
-        try {
-          const response = await axios.post('http://localhost:3001/app/location', locData);
-          console.log(response.data);
-          setlocData({
-            latitude: '',
-            longitude: ''
-          });
-          toast.success("Data Inserted Successfully!");
-        } catch (error) {
-          console.error('Error submitting data:', error);
-          toast.error("This Entry Already Exists!");
-        }
-      };
 
-    const sendLocation = ()=>{
+    const sendLocation = async (e)=>{
+        console.log(locData);
+        let ID = "LOC" + Math. floor(Math. random() * 10) + 1;
+        e.preventDefault();
         if(navigator.geolocation){
             navigator.geolocation.getCurrentPosition(
                 (position)=>{
                     setlocData({
-                        latitude:position.coords.latitude,
-                        longitude:position.coords.longitude,
+                        id:ID,
+                        latitude: position.coords.latitude,
+                        longitude: position.coords.longitude,
                     })
-
-                    PostLoc();
                     console.log("Lattitude = "+ position.coords.latitude);
                     console.log("Longitude = "+ position.coords.longitude);
                 },
                 (err)=>{
                     console.log(err.message);
                 }
-            )
+                )
+            try {
+                console.log(locData);
+                const response = await axios.post('http://localhost:3001/app/location', locData);
+                console.log(response.data);
+                setlocData({
+                  latitude: '',
+                  longitude: ''
+                });
+                toast.success("Data Inserted Successfully!");
+            } 
+            catch (error) {
+                console.error('Error submitting data:', error);
+                toast.error("This Entry Already Exists!");
+            }
         }
     }
     return (
