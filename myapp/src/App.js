@@ -6,6 +6,7 @@ import Signin from './pages/signin';
 import {BrowserRouter , Routes , Route} from 'react-router-dom';
 import Signup from './pages/Signup';
 import Input from './pages/input';
+import Services from './pages/services';
 import { ToastContainer } from 'react-toastify';
 
 
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path = "/" element = {<Home/>}/>
           <Route path = "/about" element = {<About/>}/>
+          <Route path = "/services" element = {<Services/>}/>
           <Route path = "/input" element = {<Input/>}/>
           <Route path = "/signin" element = {<Signin/>}/>
           <Route path = "/signup" element = {<Signup/>}>
